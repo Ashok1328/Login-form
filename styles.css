@@ -1,0 +1,137 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Poppins, 'Segoe UI', sans-serif;
+  font-size: 12px;
+  color: black;
+  min-height: 100vh;
+  background-image: url(background.jpg);
+  background-size: cover;
+  background-position: right;
+  overflow: hidden;
+}
+
+.container{
+  background-color:white;
+  height: 100vh;
+  width: max(40%,600px);
+  padding: 10px;
+  border-radius: 0 20px 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1{
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+form{
+  width: min(400px, 100%);
+  margin-top: 20px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-group{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+form label{
+  flex-shrink: 0;
+  height: 50px;
+  width: 50px;
+  background-color: blueviolet ;
+  fill: white;
+  color: white;
+  border-radius: 10px 0 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+form input{
+  flex-grow: 1;
+  min-width: none;
+  height: 50px;
+  padding: 1rem;
+  font: inherit;
+  border-radius: 0 10px 10px 0;
+  border: 2px solid rgb(85, 78, 78);
+  background-color: aliceblue;
+  transition: 150ms ease;
+}
+
+form input:hover{
+  border: rgb(188, 178, 178);
+}
+
+form input:focus{
+  outline: none;
+  border-color: rgb(135, 222, 183);
+}
+
+.form-group:has(input:focus) label{
+  background-color: black;
+}
+
+form input::placeholder{
+  color: black;
+  opacity: 1;
+}
+
+form button{
+  margin-top: 10px;
+  border: none;
+  border-radius: 2rem;
+  padding: .85em 4em;
+  background-color: blueviolet;
+  color: white;
+  font: inherit;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+form button:hover{
+  background-color: lightblue;
+}
+
+form button:focus{
+  outline: none;
+  background-color: lightcyan;
+}
+
+a{
+  text-decoration: none;
+  color: blue;
+  font-size: 16px;
+}
+a:hover{
+  text-decoration: underline;
+}
+
+@media(max-width:1100px) {
+  .container{
+    width: min(600px, 100px);
+    border-radius: 0px;
+  }
+}
